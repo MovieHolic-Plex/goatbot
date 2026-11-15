@@ -25,19 +25,26 @@
     for (let i = 0; i < 6 && n; i++, n = n.parentElement) if (n.textContent.includes(text)) return true;
     return false;
   };
+  const waitFor = async (fn, ms = 30000) => {
+    for (let t = 0; t < ms; t += 500) {
+      const v = fn();
+      if (v) return v;
+      await sleep(500);
+    }
+    return null;
+  };
   try {
     location.hash = "#/settings";
-    await sleep(2500);
-    const inputs = [...document.querySelectorAll("input")];
-    const keyInput = inputs.find((i) => i.type === "password" && near(i, "API Key"));
-    const endpointInput = inputs.find((i) => i.type !== "password" && near(i, "Endpoint"));
+    const keyInput = await waitFor(() =>
+      [...document.querySelectorAll("input")].find((i) => i.type === "password" && near(i, "API Key")),
+    );
+    const endpointInput = [...document.querySelectorAll("input")].find((i) => i.type !== "password" && near(i, "Endpoint"));
     if (!keyInput) throw new Error("API key input not found in settings");
     note(`endpoint field = ${endpointInput ? endpointInput.value : "missing"}`);
     setValue(keyInput, KEY);
     await sleep(800);
     location.hash = "#/chat";
-    await sleep(2500);
-    const ta = document.querySelector("#chat-input") || document.querySelector("textarea");
+    const ta = await waitFor(() => document.querySelector("#chat-input") || document.querySelector("textarea"));
     if (!ta) throw new Error("chat input not found");
     ta.focus();
     setValue(ta, MESSAGE);
@@ -66,6 +73,6 @@
     });
   } catch (e) {
     note(`error ${e && e.message}`);
-    await report({ ok: false, error: String(e && e.message) });
+    await report({ ok: false, error: String(e && e.message), page: document.body.innerText.slice(0, 600) });
   }
 })();

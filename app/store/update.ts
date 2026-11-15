@@ -6,7 +6,7 @@ import {
 } from "../constant";
 import { getClientConfig } from "../config/client";
 import { createPersistStore } from "../utils/store";
-import { clientUpdate } from "../utils";
+import { clientUpdate, semverCompare } from "../utils";
 import NextChatIcon from "../icons/nextchat-bot.png";
 import Locale from "../locales";
 import { ClientApi } from "../client/api";
@@ -45,7 +45,7 @@ async function getVersion(type: VersionType) {
       commit: { sha: string; url: string };
       name: string;
     }[];
-    return data.at(0)?.name;
+    return (data.at(0)?.name ?? "").replace(/^v/, "");
   }
 }
 
@@ -102,7 +102,10 @@ export const useUpdateStore = createPersistStore(
                   .requestPermission()
                   .then((permission) => {
                     if (permission === "granted") {
-                      if (version === remoteId) {
+                      if (
+                        !remoteId ||
+                        semverCompare(version ?? "", remoteId) !== -1
+                      ) {
                         // Show a notification using Tauri
                         window.__TAURI__?.notification.sendNotification({
                           title: "GoatBot",
