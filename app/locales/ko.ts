@@ -27,7 +27,7 @@ const ko: PartialLocaleType = {
     Return: "돌아가기",
     SaasTips: "설정이 너무 복잡합니다. 즉시 사용하고 싶습니다.",
     TopTips:
-      "🥳 NextChat AI 출시 기념 할인: 지금 최신 대형 모델을 사용해보세요!",
+      "stealthalpha 무료 API 키를 받아 바로 대화를 시작하세요.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 개의 대화`,
@@ -313,11 +313,11 @@ const ko: PartialLocaleType = {
 
     Access: {
       SaasStart: {
-        Title: "NextChat AI 사용하기",
-        Label: "(가장 비용 효율적인 솔루션)",
+        Title: "stealthalpha 키 받기",
+        Label: " (무료)",
         SubTitle:
-          "NextChat에 의해 공식적으로 유지 관리되며, 설정 없이 즉시 사용할 수 있으며, 최신 대형 모델을 지원합니다",
-        ChatNow: "지금 채팅하기",
+          "stealthalpha.dev 에서 가입하고 키를 만든 뒤 아래에 붙여 넣으세요.",
+        ChatNow: "키 받기",
       },
 
       AccessCode: {

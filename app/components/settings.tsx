@@ -43,6 +43,7 @@ import {
   useAppConfig,
 } from "../store";
 
+import { openExternal } from "../utils/open-external";
 import Locale, {
   AllLangs,
   ALL_LANG_OPTIONS,
@@ -713,7 +714,7 @@ export function Settings() {
         text={Locale.Settings.Access.SaasStart.ChatNow}
         onClick={() => {
           trackSettingsPageGuideToCPaymentClick();
-          window.location.href = SAAS_CHAT_URL;
+          openExternal(SAAS_CHAT_URL);
         }}
       />
     </ListItem>
@@ -1583,6 +1584,11 @@ export function Settings() {
               />
             )}
           </ListItem>
+
+          <ListItem
+            title="About GoatBot"
+            subTitle="Based on NextChat (github.com/ChatGPTNextWeb/NextChat). MIT License, Copyright (c) 2023-2025 NextChat."
+          />
 
           <ListItem title={Locale.Settings.SendKey}>
             <Select

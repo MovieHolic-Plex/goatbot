@@ -28,7 +28,7 @@ const en: LocaleType = {
     Later: "Later",
     SaasTips: "Too Complex, Use Immediately Now",
     TopTips:
-      "🥳 NextChat AI launch promotion: Instantly unlock the latest models!",
+      "Get a free stealthalpha API key to start chatting.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,
@@ -315,11 +315,11 @@ const en: LocaleType = {
     },
     Access: {
       SaasStart: {
-        Title: "Use NextChat AI",
-        Label: " (Most Cost-Effective Option)",
+        Title: "Get a stealthalpha key",
+        Label: " (free)",
         SubTitle:
-          "Maintained by NextChat, zero setup needed, unlock the latest models",
-        ChatNow: "Start Now",
+          "Sign up at stealthalpha.dev, create a key, paste it below.",
+        ChatNow: "Get key",
       },
       AccessCode: {
         Title: "Access Code",

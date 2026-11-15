@@ -28,7 +28,7 @@ const fr: PartialLocaleType = {
     SaasTips:
       "La configuration est trop compliquée, je veux l'utiliser immédiatement",
     TopTips:
-      "🥳 Offre de lancement NextChat AI, débloquez les derniers grands modèles",
+      "🥳 Offre de lancement GoatBot, débloquez les derniers grands modèles",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} conversations`,
@@ -306,10 +306,10 @@ const fr: PartialLocaleType = {
 
     Access: {
       SaasStart: {
-        Title: "Utiliser NextChat AI",
+        Title: "Utiliser GoatBot",
         Label: "(La solution la plus rentable)",
         SubTitle:
-          "Officiellement maintenu par NextChat, prêt à l'emploi sans configuration, prend en charge les derniers grands modèles",
+          "Officiellement maintenu par GoatBot, prêt à l'emploi sans configuration, prend en charge les derniers grands modèles",
         ChatNow: "Discuter maintenant",
       },
 

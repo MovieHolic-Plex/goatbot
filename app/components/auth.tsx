@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Path, SAAS_CHAT_URL } from "../constant";
 import { useAccessStore } from "../store";
+import { openExternal } from "../utils/open-external";
 import Locale from "../locales";
 import Delete from "../icons/close.svg";
 import Arrow from "../icons/arrow.svg";
@@ -29,7 +30,7 @@ export function AuthPage() {
   const goChat = () => navigate(Path.Chat);
   const goSaas = () => {
     trackAuthorizationPageButtonToCPaymentClick();
-    window.location.href = SAAS_CHAT_URL;
+    openExternal(SAAS_CHAT_URL);
   };
 
   const resetAccessCode = () => {
@@ -171,9 +172,11 @@ function TopBanner() {
           {Locale.Auth.TopTips}
           <a
             href={SAAS_CHAT_URL}
-            rel="stylesheet"
-            onClick={() => {
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
               trackSettingsPageGuideToCPaymentClick();
+              openExternal(SAAS_CHAT_URL);
             }}
           >
             {Locale.Settings.Access.SaasStart.ChatNow}

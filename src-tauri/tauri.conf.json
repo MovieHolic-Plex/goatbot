@@ -8,8 +8,8 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "NextChat",
-    "version": "2.16.1"
+    "productName": "GoatBot",
+    "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
@@ -54,13 +54,16 @@
       "http": {
         "all": true,
         "request": true,
-        "scope": ["https://*", "http://*"]
+        "scope": [
+          "https://*",
+          "http://*"
+        ]
       }
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "2023, Zhang Yifei All Rights Reserved.",
+      "category": "Productivity",
+      "copyright": "Copyright (c) 2026 Goat Research. Based on NextChat, MIT License, Copyright (c) 2023-2025 NextChat.",
       "deb": {
         "depends": []
       },
@@ -72,8 +75,8 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.yida.chatgpt.next.web",
-      "longDescription": "NextChat is a cross-platform AI assistant client, including Web/Win/Linux/OSX/PWA.",
+      "identifier": "dev.goatresearch.goatbot",
+      "longDescription": "GoatBot is a desktop chat client for the stealth models. Based on NextChat (MIT).",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -82,7 +85,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "NextChat App",
+      "shortDescription": "GoatBot",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -95,22 +98,14 @@
       "dangerousUseHttpScheme": true
     },
     "updater": {
-      "active": true,
-      "endpoints": [
-        "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases/latest/download/latest.json"
-      ],
-      "dialog": true,
-      "windows": {
-        "installMode": "passive"
-      },
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IERFNDE4MENFM0Y1RTZBOTQKUldTVWFsNC96b0JCM3RqM2NmMnlFTmxIaStRaEJrTHNOU2VqRVlIV1hwVURoWUdVdEc1eDcxVEYK"
+      "active": false
     },
     "windows": [
       {
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "NextChat",
+        "title": "GoatBot",
         "width": 960,
         "hiddenTitle": true,
         "titleBarStyle": "Overlay"

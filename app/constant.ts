@@ -1,7 +1,7 @@
-export const OWNER = "ChatGPTNextWeb";
-export const REPO = "ChatGPT-Next-Web";
+export const OWNER = "MovieHolic-Plex";
+export const REPO = "goatbot";
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
-export const PLUGINS_REPO_URL = `https://github.com/${OWNER}/NextChat-Awesome-Plugins`;
+export const PLUGINS_REPO_URL = "https://github.com/ChatGPTNextWeb/NextChat-Awesome-Plugins";
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
 export const RELEASE_URL = `${REPO_URL}/releases`;
@@ -11,7 +11,7 @@ export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 
 export const STABILITY_BASE_URL = "https://api.stability.ai";
 
-export const OPENAI_BASE_URL = "https://api.openai.com";
+export const OPENAI_BASE_URL = "https://api.stealthalpha.dev";
 export const ANTHROPIC_BASE_URL = "https://api.anthropic.com";
 
 export const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/";
@@ -927,7 +927,7 @@ export const internalAllowedWebDavEndpoints = [
   "https://app.koofr.net/dav/Koofr",
 ];
 
-export const DEFAULT_GA_ID = "G-89WN60ZK2E";
+export const DEFAULT_GA_ID = "";
 
-export const SAAS_CHAT_URL = "https://nextchat.club";
-export const SAAS_CHAT_UTM_URL = "https://nextchat.club?utm=github";
+export const SAAS_CHAT_URL = "https://stealthalpha.dev/signup/";
+export const SAAS_CHAT_UTM_URL = "https://stealthalpha.dev/signup/";

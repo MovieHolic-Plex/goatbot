@@ -27,7 +27,7 @@ const tr: PartialLocaleType = {
     Return: "Geri",
     SaasTips: "Ayarlar çok karmaşık, hemen kullanmak istiyorum",
     TopTips:
-      "🥳 NextChat AI lansman teklifi, en son büyük modelleri şimdi açın",
+      "🥳 GoatBot lansman teklifi, en son büyük modelleri şimdi açın",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} konuşma`,
@@ -298,10 +298,10 @@ const tr: PartialLocaleType = {
 
     Access: {
       SaasStart: {
-        Title: "NextChat AI kullanın",
+        Title: "GoatBot kullanın",
         Label: "(En maliyet etkin çözüm)",
         SubTitle:
-          "NextChat tarafından resmi olarak yönetilmektedir, yapılandırma olmadan hemen kullanıma hazırdır, en son büyük modelleri destekler",
+          "GoatBot tarafından resmi olarak yönetilmektedir, yapılandırma olmadan hemen kullanıma hazırdır, en son büyük modelleri destekler",
         ChatNow: "Şimdi sohbet et",
       },
 

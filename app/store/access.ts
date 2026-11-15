@@ -64,7 +64,7 @@ const DEFAULT_AI302_URL = isApp ? AI302_BASE_URL : ApiPath["302.AI"];
 
 const DEFAULT_ACCESS_STATE = {
   accessCode: "",
-  useCustomConfig: false,
+  useCustomConfig: true,
 
   provider: ServiceProvider.OpenAI,
 
@@ -145,7 +145,7 @@ const DEFAULT_ACCESS_STATE = {
   hideBalanceQuery: false,
   disableGPT4: false,
   disableFastLink: false,
-  customModels: "",
+  customModels: "-all,+stealth-1@OpenAI",
   defaultModel: "",
   visionModels: "",
 

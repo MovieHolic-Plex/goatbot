@@ -26,7 +26,7 @@ const cn = {
     Confirm: "确认",
     Later: "稍后再说",
     SaasTips: "配置太麻烦，想要立即使用",
-    TopTips: "🥳 NextChat AI 首发优惠，立刻解锁最新大模型",
+    TopTips: "获取免费的 stealthalpha API 密钥，立即开始对话。",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
@@ -311,9 +311,9 @@ const cn = {
 
     Access: {
       SaasStart: {
-        Title: "使用 NextChat AI",
+        Title: "获取 stealthalpha 密钥",
         Label: "（性价比最高的方案）",
-        SubTitle: "由 NextChat 官方维护, 零配置开箱即用，支持最新大模型",
+        SubTitle: "在 stealthalpha.dev 注册并创建密钥，然后粘贴到下方。",
         ChatNow: "立刻对话",
       },
       AccessCode: {

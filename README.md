@@ -1,3 +1,13 @@
+# GoatBot
+
+GoatBot is a desktop chat client for the stealth models (default endpoint `https://api.stealthalpha.dev`, model `stealth-1`). Get a free key at https://stealthalpha.dev/signup/ and paste it in Settings.
+
+GoatBot is a fork of [NextChat](https://github.com/ChatGPTNextWeb/NextChat) (MIT License, Copyright (c) 2023-2025 NextChat). The original license is kept unchanged in [LICENSE](LICENSE). The upstream README follows below for reference.
+
+Builds: `.github/workflows/goatbot.yml` builds macOS (universal dmg + zip), Windows (NSIS setup exe, msi, portable zip) and Linux (AppImage), and runs a real-message smoke test of the desktop app under Xvfb. Builds are unsigned and auto-update is disabled.
+
+---
+
 <div align="center">
 
 <a href='https://nextchat.club'>
