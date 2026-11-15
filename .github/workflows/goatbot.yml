@@ -83,7 +83,9 @@ jobs:
           export DISPLAY=:99
           Xvfb :99 -screen 0 1280x800x24 &
           sleep 2
-          GOATBOT_QA_JS=$HOME/qa.js src-tauri/target/release/goatbot > qa/app.log 2>&1 &
+          BIN=$(find src-tauri/target/release -maxdepth 1 -type f -executable -iname 'goat*' | head -1)
+          echo "binary: $BIN"
+          GOATBOT_QA_JS=$HOME/qa.js "$BIN" > qa/app.log 2>&1 &
           for i in $(seq 1 240); do [ -s qa/result.json ] && break; sleep 1; done
           sleep 2
           import -window root qa/goatbot-chat.png
