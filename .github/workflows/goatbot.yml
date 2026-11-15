@@ -34,21 +34,21 @@ jobs:
       - name: zip (macOS)
         if: runner.os == 'macOS'
         run: |
-          mkdir -p out
-          cp src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg out/GoatBot-0.1.0-mac-universal.dmg
-          ditto -c -k --keepParent src-tauri/target/universal-apple-darwin/release/bundle/macos/GoatBot.app out/GoatBot-0.1.0-mac-universal.zip
+          mkdir -p release-out
+          cp src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg release-out/GoatBot-0.1.0-mac-universal.dmg
+          ditto -c -k --keepParent src-tauri/target/universal-apple-darwin/release/bundle/macos/GoatBot.app release-out/GoatBot-0.1.0-mac-universal.zip
       - name: zip (Windows)
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          New-Item -ItemType Directory -Force out | Out-Null
-          Copy-Item (Get-ChildItem src-tauri/target/release/bundle/nsis/*.exe | Select-Object -First 1).FullName out/GoatBot-0.1.0-win-x64-setup.exe
-          Copy-Item (Get-ChildItem src-tauri/target/release/bundle/msi/*.msi | Select-Object -First 1).FullName out/GoatBot-0.1.0-win-x64.msi
-          Compress-Archive -Path src-tauri/target/release/goatbot.exe -DestinationPath out/GoatBot-0.1.0-win-x64-portable.zip
+          New-Item -ItemType Directory -Force release-out | Out-Null
+          Copy-Item (Get-ChildItem src-tauri/target/release/bundle/nsis/*.exe | Select-Object -First 1).FullName release-out/GoatBot-0.1.0-win-x64-setup.exe
+          Copy-Item (Get-ChildItem src-tauri/target/release/bundle/msi/*.msi | Select-Object -First 1).FullName release-out/GoatBot-0.1.0-win-x64.msi
+          Compress-Archive -Path src-tauri/target/release/goatbot.exe -DestinationPath release-out/GoatBot-0.1.0-win-x64-portable.zip
       - uses: actions/upload-artifact@v4
         with:
           name: goatbot-${{ runner.os }}
-          path: out/*
+          path: release-out/*
           if-no-files-found: error
 
   linux-qa:
@@ -59,7 +59,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@1.85.0
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: src-tauri
@@ -91,8 +91,8 @@ jobs:
           cat qa/result.json
           python3 -c "import json,sys; r=json.load(open('qa/result.json')); sys.exit(0 if r.get('ok') else 1)"
       - run: |
-          mkdir -p out
-          cp src-tauri/target/release/bundle/appimage/*.AppImage out/GoatBot-0.1.0-linux-x86_64.AppImage
+          mkdir -p release-out
+          cp src-tauri/target/release/bundle/appimage/*.AppImage release-out/GoatBot-0.1.0-linux-x86_64.AppImage
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -101,4 +101,4 @@ jobs:
             qa/goatbot-chat.png
             qa/result.json
             qa/app.log
-            out/*
+            release-out/*
