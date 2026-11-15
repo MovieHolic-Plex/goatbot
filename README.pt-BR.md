@@ -15,7 +15,7 @@ GoatBot é um app de chat para desktop rápido e leve. Já vem conectado ao **st
 - **stealth-1 por padrão**: basta uma chave de API grátis
 - **Respostas em streaming** com Markdown, destaque de código, LaTeX e Mermaid
 - **Histórico local**: conversas e chaves ficam no seu dispositivo
-- **Pequeno e rápido**: shell nativo Tauri, instaladores de cerca de 10 MB
+- **Pequeno e rápido**: shell nativo Tauri, 6 MB no Windows e 13 MB no macOS
 - **Qualquer API compatível com OpenAI**: troque endpoint, chave e modelo nas Configurações
 - **Máscaras de prompt, exportação em Markdown ou imagem, mais de 20 idiomas**
 - **macOS, Windows e Linux**

@@ -15,7 +15,7 @@ GoatBot 은 빠르고 가벼운 데스크톱 채팅 앱입니다. 처음부터 *
 - **기본 모델 stealth-1**: 무료 API 키 하나면 끝
 - **스트리밍 답변**, Markdown·코드 하이라이트·LaTeX·Mermaid 지원
 - **로컬 기록**: 대화와 키는 내 기기에만 저장
-- **작고 빠름**: 네이티브 Tauri, 설치 파일 약 10 MB
+- **작고 빠름**: 네이티브 Tauri, Windows 6 MB · macOS 13 MB
 - **모든 OpenAI 호환 API**: 설정에서 엔드포인트·키·모델 변경
 - **프롬프트 마스크, Markdown/이미지 내보내기, 20개 이상 UI 언어**
 - **macOS, Windows, Linux**

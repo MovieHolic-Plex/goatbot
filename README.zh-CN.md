@@ -15,7 +15,7 @@ GoatBot 是一款快速、轻量的桌面聊天应用。开箱即用 **stealth-1
 - **默认使用 stealth-1**：只需一个免费 API 密钥
 - **流式回复**，支持 Markdown、代码高亮、LaTeX 和 Mermaid
 - **本地历史**：对话和密钥只保存在你的设备上
-- **小巧快速**：原生 Tauri 外壳，安装包约 10 MB
+- **小巧快速**：原生 Tauri 外壳，Windows 版 6 MB，macOS 版 13 MB
 - **兼容任何 OpenAI 接口**：在设置中修改地址、密钥和模型
 - **提示词面具、导出 Markdown 或图片、20+ 种界面语言**
 - **macOS、Windows、Linux**
