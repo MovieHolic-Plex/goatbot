@@ -9,6 +9,9 @@ import { groupBy } from "lodash-es";
 import styles from "./model-config.module.scss";
 import { getModelProvider } from "../utils/model";
 
+const providerLabel = (name?: string) =>
+  name === ServiceProvider.OpenAI ? "OpenAI-compatible" : name ?? "";
+
 export function ModelConfigList(props: {
   modelConfig: ModelConfig;
   updateConfig: (updater: (config: ModelConfig) => void) => void;
@@ -39,7 +42,7 @@ export function ModelConfigList(props: {
           }}
         >
           {Object.keys(groupModels).map((providerName, index) => (
-            <optgroup label={providerName} key={index}>
+            <optgroup label={providerLabel(providerName)} key={index}>
               {groupModels[providerName].map((v, i) => (
                 <option value={`${v.name}@${v.provider?.providerName}`} key={i}>
                   {v.displayName}
@@ -263,7 +266,7 @@ export function ModelConfigList(props: {
             .filter((v) => v.available)
             .map((v, i) => (
               <option value={`${v.name}@${v.provider?.providerName}`} key={i}>
-                {v.displayName}({v.provider?.providerName})
+                {v.displayName}({providerLabel(v.provider?.providerName)})
               </option>
             ))}
         </Select>

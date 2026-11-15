@@ -5,7 +5,7 @@ description = "A cross platform app for LLM ChatBot."
 authors = ["Yidadaa"]
 license = "mit"
 repository = ""
-default-run = "nextchat"
+default-run = "goatbot"
 edition = "2021"
 rust-version = "1.60"
 
@@ -23,7 +23,6 @@ tauri = { version = "1.5.4", features = [ "http-all",
     "clipboard-all",
     "dialog-all",
     "shell-open",
-    "updater",
     "window-close",
     "window-hide",
     "window-maximize",

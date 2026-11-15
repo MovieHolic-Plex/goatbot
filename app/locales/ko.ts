@@ -8,9 +8,10 @@ const ko: PartialLocaleType = {
   WIP: "곧 출시 예정...",
   Error: {
     Unauthorized: isApp
-      ? `😆 대화 중 문제가 발생했습니다, 걱정하지 마세요:
-    \\ 1️⃣ 세팅 없이 시작하고 싶다면, [여기를 클릭하여 즉시 대화를 시작하세요 🚀](${SAAS_CHAT_UTM_URL})
-    \\ 2️⃣ 자신의 OpenAI 리소스를 사용하고 싶다면, [여기를 클릭하여](/#/settings) 설정을 수정하세요 ⚙️`
+      ? `👋 대화를 시작하려면 API 키를 넣어 주세요:
+
+1. [stealthalpha.dev](${SAAS_CHAT_UTM_URL}) 에서 무료 키 받기
+2. [설정](/#/settings) → API Key 에 붙여 넣기`
       : `😆 대화 중 문제가 발생했습니다, 걱정하지 마세요:
     \ 1️⃣ 세팅 없이 시작하고 싶다면, [여기를 클릭하여 즉시 대화를 시작하세요 🚀](${SAAS_CHAT_UTM_URL})
     \ 2️⃣ 개인 배포 버전을 사용하고 있다면, [여기를 클릭하여](/#/auth) 접근 키를 입력하세요 🔑

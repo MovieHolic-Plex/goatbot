@@ -9,9 +9,10 @@ const en: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized: isApp
-      ? `😆 Oops, there's an issue. No worries:
-     \\ 1️⃣ New here? [Click to start chatting now 🚀](${SAAS_CHAT_UTM_URL})
-     \\ 2️⃣ Want to use your own OpenAI resources? [Click here](/#/settings) to change settings ⚙️`
+      ? `👋 Add your API key to start chatting:
+
+1. Get a free key at [stealthalpha.dev](${SAAS_CHAT_UTM_URL})
+2. Paste it in [Settings](/#/settings) → API Key`
       : `😆 Oops, there's an issue. Let's fix it:
      \ 1️⃣ New here? [Click to start chatting now 🚀](${SAAS_CHAT_UTM_URL})
      \ 2️⃣ Using a private setup? [Click here](/#/auth) to enter your key 🔑
@@ -336,14 +337,14 @@ const en: LocaleType = {
       },
       OpenAI: {
         ApiKey: {
-          Title: "OpenAI API Key",
-          SubTitle: "User custom OpenAI Api Key",
+          Title: "API Key",
+          SubTitle: "Your API key (stored on this device)",
           Placeholder: "sk-xxx",
         },
 
         Endpoint: {
-          Title: "OpenAI Endpoint",
-          SubTitle: "Must start with http(s):// or use /api/openai as default",
+          Title: "API Endpoint",
+          SubTitle: "Any OpenAI-compatible base URL, starting with http(s)://",
         },
       },
       Azure: {

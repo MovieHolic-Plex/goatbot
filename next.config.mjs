@@ -20,6 +20,20 @@ const nextConfig = {
       );
     }
 
+    if (mode === "export") {
+      config.plugins.push(
+        new webpack.NormalModuleReplacementPlugin(
+          /[\\/]mcp[\\/]actions$/,
+          (resource) => {
+            resource.request = resource.request.replace(
+              /actions$/,
+              "actions.export",
+            );
+          },
+        ),
+      );
+    }
+
     config.resolve.fallback = {
       child_process: false,
     };

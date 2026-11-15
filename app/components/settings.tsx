@@ -1848,7 +1848,7 @@ export function Settings() {
                     >
                       {Object.entries(ServiceProvider).map(([k, v]) => (
                         <option value={v} key={k}>
-                          {k}
+                          {v === ServiceProvider.OpenAI ? "OpenAI-compatible" : k}
                         </option>
                       ))}
                     </Select>
